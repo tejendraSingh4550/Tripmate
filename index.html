@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#d8edf5" />
+  <title>Roamly — your trips, in one place</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="scene">
+    <div class="ocean"></div>
+    <section class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Roamly home">RO<span>A</span>MLY</a>
+        <nav class="nav-tabs" aria-label="Main navigation">
+          <button class="nav-tab active" data-view="Home">Home</button><button class="nav-tab" data-view="My Trips">My Trips</button><button class="nav-tab" data-view="Explore">Explore</button><button class="nav-tab" data-view="Shared Trips">Shared Trips</button><button class="nav-tab" data-view="Stats">Stats</button>
+        </nav>
+        <div class="top-actions"><button class="icon-btn" aria-label="Help">⌕</button><button class="icon-btn" aria-label="Settings">⚙</button><button class="primary-btn" id="new-trip">Plan a new trip <span>↗</span></button></div>
+        <button class="mobile-menu" aria-label="Open navigation">☰</button>
+      </header>
+
+      <div class="dashboard">
+        <section class="profile-card photo-card">
+          <div class="profile-top"><span>♙ &nbsp;Account</span><button class="mini-icon" aria-label="Profile settings">⚙</button></div>
+          <div class="profile-copy"><p class="script green">Jenna Peterson</p><span>12,540 Miles Traveled</span></div>
+        </section>
+
+        <section class="calendar-card panel">
+          <div class="panel-title"><span>▦ &nbsp;Calendar</span><button class="year-select" id="year-select">2025 <span>⌄</span></button></div>
+          <div class="calendar-heading"><button class="arrow" aria-label="Previous month">‹</button><strong>May – Oct</strong><button class="arrow" aria-label="Next month">›</button></div>
+          <div class="months"><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div>
+          <div class="calendar-grid"><div class="month-line"></div><div class="month-line"></div><div class="month-line"></div><div class="month-line"></div><div class="month-line"></div><div class="month-line"></div>
+            <button class="event vienna" data-trip="Vienna">Vienna <small>01 – 05 May</small><i>🌷</i></button><button class="event paris" data-trip="Paris, France">Paris, Fr <small>26 – 28 Jul</small><i>🗼</i></button><button class="event bali" data-trip="Bali Solo Trip">Bali Solo Trip <small>03 Sep – 31 Oct</small><i>🌴</i></button>
+          </div>
+        </section>
+
+        <section class="upcoming-card panel">
+          <div class="trip-heading"><div><p class="script pink">Paris, France</p><span>26 – 28 Jul &nbsp;·&nbsp; $864</span></div><button class="mini-icon" aria-label="Trip settings">⚙</button></div>
+          <div class="trip-meta"><div class="avatars"><span>👩🏻</span><span>👨🏽</span></div><span class="pill">Montmartre</span><span class="pill">Louvre</span><span class="pill">Shopping</span></div>
+          <div class="trip-photos"><div class="map-thumb"><svg viewBox="0 0 150 100" aria-label="Map of Paris"><path d="M-4 15 24 22 33 5 63 18 75 8 93 24 124 15 151 34M-2 67 25 57 40 80 65 61 87 78 108 61 151 77M10 35 41 40 52 27 82 44 112 35 141 52" fill="none" stroke="#87aeb3" stroke-width="2"/><path d="M35 91 50 70 61 51 81 49 93 31" fill="none" stroke="#f184b8" stroke-width="3" stroke-dasharray="4 4"/></svg><i>📍</i></div><div class="stay-photo"><span>Ap. near Le Marais<br/>2 nights · 2 bedrooms</span></div></div>
+        </section>
+
+        <section class="previous-card panel"><div class="section-heading"><span>◷ &nbsp;Previous trips</span><button class="see-all" id="see-all">See all</button></div><button class="memory-card" data-trip="Japan"><span class="script pink">Japan</span><small>12 – 19 Oct</small><span class="memory-arrow">↗</span><div class="memory-labels"><span>Solo</span><span>Cultural</span><span>Roundtrip</span></div></button></section>
+
+        <section class="map-panel panel"><div class="map-title"><span>◎ &nbsp;Map</span><button class="country-select" id="country-select">All countries <span>⌄</span></button></div>
+          <div class="map-art" aria-label="Map showing visited countries in Europe"><svg viewBox="0 0 680 310" role="img" aria-label="Map of Europe with France planned and Spain and Italy visited">
+            <path class="land" d="M116 0h564v310H0V212l43-20 11-35 36-4 10-42 36-9-6-36 38-10 8-40z"/><path class="country" d="m247 63 54-17 42 25-4 47-32 16-11 53-46-8-24-46 12-33z"/><path class="country" d="m299 190 21 14 13 41-11 36-20-20-10-40z"/><path class="country" d="m359 109 28-9 12 29-12 31-17 8-17-23z"/><path class="country" d="m411 146 31-13 48 23 5 42-30 19-41-12-22-35z"/><path class="country" d="m476 217 18 20-8 43-21-10-7-34z"/><path class="country" d="m531 110 41-13 47 24-16 31-41 4-29-18z"/>
+            <path class="planned" d="m247 63 54-17 42 25-4 47-32 16-11 53-46-8-24-46 12-33z"/><path class="visited" d="m299 190 21 14 13 41-11 36-20-20-10-40zM359 109l28-9 12 29-12 31-17 8-17-23zM411 146l31-13 48 23 5 42-30 19-41-12-22-35z"/>
+            <g class="map-dots"><circle cx="291" cy="100" r="4"/><text x="302" y="104">Paris</text><circle cx="386" cy="175" r="4"/><text x="397" y="179">Milano</text><circle cx="317" cy="224" r="4"/><text x="328" y="228">Barcelona</text></g>
+          </svg></div>
+          <div class="map-stats"><div><strong>58</strong><span>Travel Days</span></div><div><strong>4</strong><span>Countries Visited</span></div><div><strong>7</strong><span>Trips Planned</span></div></div><div class="map-legend"><span><i class="dot lime-dot"></i>Planned</span><span><i class="dot pink-dot"></i>Visited</span><span><i class="dot pale-dot"></i>Not visited</span></div><div class="zoom"><button aria-label="Zoom in">+</button><button aria-label="Zoom out">−</button></div>
+        </section>
+      </div>
+      <footer class="footer"><span>✦ &nbsp;Make room for wonder.</span><span>YOUR NEXT STORY STARTS HERE &nbsp;↗</span></footer>
+    </section>
+    <div class="toast" id="toast" role="status"></div>
+  </main>
+  <dialog id="trip-dialog"><form method="dialog" class="dialog-card"><button class="close-dialog" aria-label="Close">×</button><span class="eyebrow">YOUR NEXT ADVENTURE</span><h2>Where to next?</h2><label>Destination<input id="destination" placeholder="e.g. Kyoto, Japan" required /></label><div class="dialog-row"><label>Leaving<input type="date" /></label><label>Returning<input type="date" /></label></div><button class="primary-btn submit-trip" value="create">Start planning <span>↗</span></button></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
